@@ -1,0 +1,32 @@
+{
+  "name": "routing-games",
+  "version": "1.0.0",
+  "description": "Interactive multiplayer VRP competition platform with real-time leaderboards",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=packages/backend\" \"npm run dev --workspace=packages/frontend\"",
+    "dev:frontend": "npm run dev --workspace=packages/frontend",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "build": "npm run build --workspaces",
+    "build:frontend": "npm run build --workspace=packages/frontend",
+    "build:backend": "npm run build --workspace=packages/backend",
+    "start": "npm run start --workspace=packages/backend",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "keywords": [
+    "vrp",
+    "vehicle-routing",
+    "optimization",
+    "competitive-learning",
+    "algorithm"
+  ],
+  "author": "HOM05",
+  "license": "MIT"
+}
